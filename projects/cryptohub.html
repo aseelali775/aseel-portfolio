@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>عقل كريبتو AQL Crypto | تفاصيل المشروع - أصيل علي</title>
+  <meta name="description" content="تفاصيل مشروع AQL Crypto، منصة معلوماتية لمتابعة أسعار العملات الرقمية والأخبار والتحليلات والمؤشرات، من تطوير أصيل علي.">
+  <meta name="theme-color" content="#08111f">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="AQL Crypto — Project by Aseel Ali">
+  <meta property="og:description" content="منصة معلوماتية للعملات الرقمية تجمع الأسعار والأخبار والتحليلات والمؤشرات في واجهة واحدة.">
+  <link rel="canonical" href="https://aseelali775.github.io/aseel-portfolio/projects/cryptohub.html">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="../style.css">
+<style>
+    .detail-hero{padding:76px 0 58px;position:relative;overflow:hidden}
+    .detail-hero:before{content:"";position:absolute;width:520px;height:520px;inset-inline-end:-180px;top:-260px;border-radius:50%;background:rgba(22,140,255,.12);filter:blur(12px);pointer-events:none}
+    .detail-wrap{position:relative}
+    .breadcrumb{display:flex;gap:9px;align-items:center;color:var(--muted);font-size:.9rem;margin-bottom:25px;flex-wrap:wrap}
+    .breadcrumb a:hover{color:var(--cyan)}
+    .project-label{display:inline-flex;align-items:center;gap:9px;border:1px solid rgba(54,197,240,.28);background:var(--blue-soft);color:var(--cyan);padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:700}
+    .project-label .dot{width:7px;height:7px;border-radius:50%;background:var(--cyan)}
+    .detail-hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:45px;align-items:center}
+    .detail-title{font-size:clamp(2.4rem,5vw,4.3rem);line-height:1.15;letter-spacing:-.04em;margin:18px 0 10px}
+    .detail-title span{color:var(--cyan)}
+    .detail-subtitle{font-size:1.2rem;font-weight:700;color:var(--muted);margin:0 0 18px}
+    .detail-intro{font-size:1.05rem;color:var(--muted);max-width:650px;line-height:2}
+    .detail-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+    .button{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:12px 18px;border-radius:11px;font-weight:700;border:1px solid transparent;transition:transform .2s,border-color .2s}
+    .button:hover{transform:translateY(-2px)}
+    .button-primary{background:linear-gradient(110deg,var(--blue),#087fc4);color:white;box-shadow:0 10px 30px rgba(22,140,255,.18)}
+    .button-secondary{border-color:var(--line);background:var(--panel);color:var(--text)}
+    .button-disabled{opacity:.72;cursor:default}
+    .project-preview{position:relative;min-height:350px;border:1px solid rgba(54,197,240,.24);border-radius:23px;overflow:hidden;background:radial-gradient(ellipse at 70% 18%,#155078,transparent 43%),linear-gradient(145deg,#0e2037,#07111f);box-shadow:var(--shadow);padding:24px;color:#edf8ff}
+    .preview-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:18px;border-bottom:1px solid #ffffff18;font:700 .8rem Inter,sans-serif}
+    .preview-logo{font-size:1.15rem;font-weight:800;letter-spacing:.06em}
+    .preview-logo span{color:#43c8ef}
+    .preview-status{font-size:.65rem;letter-spacing:.08em;color:#a9c7dc}
+    .preview-status i{display:inline-block;width:6px;height:6px;border-radius:50%;background:#43d9a1;margin-inline-end:6px}
+    .preview-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:19px}
+    .preview-stat{padding:12px;border:1px solid #ffffff18;background:#ffffff08;border-radius:12px}
+    .preview-stat small{display:block;color:#a9c0d5;font-size:.68rem}
+    .preview-stat strong{display:block;font:700 1.05rem Inter,sans-serif;margin-top:7px}
+    .preview-stat em{display:block;font:600 .7rem Inter,sans-serif;color:#3ee0a1;margin-top:3px;font-style:normal}
+    .chart-area{height:145px;margin-top:20px;border-radius:12px;overflow:hidden;background:linear-gradient(180deg,#168cff12,transparent);border-bottom:1px solid #36c5f055}
+    .chart-area svg{width:100%;height:100%}
+    .preview-foot{display:flex;justify-content:space-between;gap:10px;color:#9bb5cc;font-size:.69rem;margin-top:12px}
+    .section{padding:74px 0}
+    .section-heading{text-align:center;max-width:800px;margin:0 auto 38px}
+    .section-kicker{font:700 .76rem Inter,'Tajawal',sans-serif;letter-spacing:.14em;color:var(--cyan)}
+    .section-heading h2{font-size:clamp(1.8rem,3.4vw,2.6rem);line-height:1.3;margin:10px 0 12px}
+    .section-heading p{color:var(--muted);margin:0;line-height:1.9}
+    .feature-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+    .feature-card,.info-card,.tech-card{border:1px solid var(--line);border-radius:17px;background:var(--panel);padding:23px}
+    .feature-icon{display:grid;place-items:center;width:47px;height:47px;border-radius:14px;background:var(--blue-soft);color:var(--cyan);font-size:1.4rem;margin-bottom:15px}
+    .feature-card h3,.info-card h3{margin:0 0 8px;font-size:1.1rem}
+    .feature-card p,.info-card p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.9}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .info-card ul{padding-inline-start:20px;color:var(--muted);margin:12px 0 0}
+    .info-card li{margin:7px 0}
+    .tech-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+    .tech-card{text-align:center;padding:19px 12px}
+    .tech-card i{display:block;font-size:2.2rem;margin-bottom:8px}
+    .tech-card strong{display:block;font-family:Inter,'Tajawal',sans-serif;font-size:.95rem}
+    .tech-card small{display:block;color:var(--muted);margin-top:5px;font-size:.78rem}
+    .gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+    .gallery-item{border:1px solid var(--line);background:var(--panel);border-radius:17px;overflow:hidden}
+    
+    /* التعديل 1: إزالة الارتفاع الثابت (height: 220px) و display: grid */
+    .gallery-image{background:radial-gradient(ellipse at 50% 30%,#17496b,#0a1728 75%);position:relative;display:block;overflow:hidden}
+    
+    /* التعديل 2: جعل الارتفاع ديناميكياً (height: auto) وإزالة الخصائص المطلقة (position: absolute; inset: 0) */
+    .gallery-image img{width:100%;height:auto;display:block}
+    
+    .gallery-image img:not([src=""]){display:block}
+    .gallery-fallback{padding:20px;text-align:center;color:#dcefff}
+    .gallery-fallback b{display:block;font:800 1.1rem Inter,sans-serif;color:#45c5ef;margin-bottom:7px}
+    .gallery-fallback span{font-size:.8rem;color:#adc5d9}
+    .gallery-caption{padding:16px 18px}
+    .gallery-caption strong{display:block}
+    .gallery-caption p{color:var(--muted);font-size:.87rem;margin:5px 0 0}
+    .disclaimer{border-inline-start:3px solid var(--cyan);padding:14px 17px;background:var(--blue-soft);border-radius:9px;color:var(--muted);font-size:.9rem;line-height:1.9;margin-top:25px}
+    .back-row{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;padding:27px 0}
+    .back-row p{margin:0;color:var(--muted);font-size:.9rem}
+    .status-note{font-size:.82rem;color:var(--muted);margin-top:12px}
+    .detail-footer{border-top:1px solid var(--line);padding:25px 0}
+    .detail-footer .container{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:var(--muted);font-size:.84rem}
+    .detail-footer a{color:var(--cyan)}
+    
+    @media(max-width:800px){
+        .detail-hero-grid{grid-template-columns:1fr;gap:32px}
+        .project-preview{min-height:310px}
+        .feature-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+        .tech-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+    }
+    
+    @media(max-width:560px){
+        .container{width:min(var(--container),calc(100% - 32px))}
+        .detail-hero{padding:45px 0 35px}
+        .detail-title{font-size:2.5rem}
+        .project-preview{padding:16px;min-height:290px}
+        .preview-stat{padding:9px}
+        .preview-stat strong{font-size:.87rem}
+        .chart-area{height:120px}
+        .feature-grid,.two-col,.gallery-grid{grid-template-columns:1fr}
+        .tech-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+        .section{padding:55px 0}
+        /* تم حذف .gallery-image{height: 190px} من هنا للسماح بالتمدد في الشاشات الصغيرة أيضاً */
+    }
+</style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-ar="انتقل إلى المحتوى" data-en="Skip to content">انتقل إلى المحتوى</a>
+  <header class="site-header"><nav class="navbar container" aria-label="القائمة الرئيسية">
+    <a class="logo" href="../index.html" aria-label="Aseel Ali"><span class="logo-mark">A</span><span class="logo-name">Aseel Ali<span class="logo-dot">.</span></span></a>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-label="فتح القائمة" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="../index.html#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li><li><a href="../index.html#about" data-ar="نبذة عني" data-en="About">نبذة عني</a></li><li><a href="../index.html#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+      <li class="language-item"><button class="language-toggle" id="lang-toggle" type="button">EN</button></li><li class="theme-item"><button class="theme-toggle" id="theme-toggle" type="button" aria-label="تبديل الوضع"><span id="theme-icon">☼</span></button></li>
+    </ul>
+  </nav></header>
+  <main id="main-content">
+    <section class="detail-hero"><div class="container detail-wrap">
+      <div class="breadcrumb"><a href="../index.html" data-ar="الرئيسية" data-en="Home">الرئيسية</a><span>／</span><a href="../index.html#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a><span>／</span><span>AQL Crypto</span></div>
+      <div class="detail-hero-grid">
+        <div>
+          <span class="project-label"><span class="dot"></span><span data-ar="مشروع ويب متكامل" data-en="Full-stack web project">مشروع ويب متكامل</span></span>
+          <h1 class="detail-title">AQL <span>Crypto</span></h1>
+          <p class="detail-subtitle" data-ar="منصة معلوماتية لمتابعة سوق العملات الرقمية" data-en="A crypto market information platform">منصة معلوماتية لمتابعة سوق العملات الرقمية</p>
+          <p class="detail-intro" data-ar="عقل كريبتو منصة معلوماتية تجمع بيانات السوق والأخبار والتحليلات والمؤشرات الاقتصادية في مكان واحد. يركز المشروع على تقديم معلومات واضحة ومحدثة لمساعدة الزائر على فهم حركة السوق، دون تنفيذ تداولات أو إدارة محافظ أو استقبال إيداعات." data-en="AQL Crypto is an information platform that brings market data, news, analysis, and economic indicators together. It focuses on presenting clear, updated information to help visitors understand market movements; it does not execute trades, manage wallets, or accept deposits.">عقل كريبتو منصة معلوماتية تجمع بيانات السوق والأخبار والتحليلات والمؤشرات الاقتصادية في مكان واحد. يركز المشروع على تقديم معلومات واضحة ومحدثة لمساعدة الزائر على فهم حركة السوق، دون تنفيذ تداولات أو إدارة محافظ أو استقبال إيداعات.</p>
+          <div class="detail-actions"><a class="button button-primary" href="../index.html#projects"><span data-ar="العودة إلى المشاريع" data-en="Back to projects">العودة إلى المشاريع</span><span aria-hidden="true">↙</span></a><span class="button button-secondary button-disabled" aria-disabled="true"><span data-ar="المعاينة المباشرة غير متاحة حاليًا" data-en="Live demo currently unavailable">المعاينة المباشرة غير متاحة حاليًا</span></span></div>
+          <p class="status-note" data-ar="الاستضافة السابقة متوقفة حاليًا، ومستودع الشيفرة خاص؛ لذلك لا تتوفر روابط عامة للمعاينة أو الشيفرة." data-en="The previous hosting is currently inactive and the source repository is private, so public demo and source-code links are not available.">الاستضافة السابقة متوقفة حاليًا، ومستودع الشيفرة خاص؛ لذلك لا تتوفر روابط عامة للمعاينة أو الشيفرة.</p>
+        </div>
+        <div class="project-preview" role="img" aria-label="AQL Crypto dashboard concept preview">
+          <div class="preview-top"><span class="preview-logo">AQL <span>CRYPTO</span></span><span class="preview-status"><i></i><span data-ar="لوحة سوق تجريبية" data-en="Dashboard concept">لوحة سوق تجريبية</span></span></div>
+          <div class="preview-stats"><div class="preview-stat"><small>BTC / USD</small><strong>$67,420</strong><em>+2.4%</em></div><div class="preview-stat"><small>ETH / USD</small><strong>$3,520</strong><em>+1.8%</em></div><div class="preview-stat"><small data-ar="إجمالي السوق" data-en="Market cap">إجمالي السوق</small><strong>$2.4T</strong><em>+0.9%</em></div></div>
+          <div class="chart-area"><svg viewBox="0 0 600 180" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="chartFill" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#36c5f0" stop-opacity=".32"/><stop offset="1" stop-color="#36c5f0" stop-opacity="0"/></linearGradient></defs><path d="M0 145 C35 132 40 148 68 120 S110 136 137 105 S180 120 210 87 S255 111 285 80 S330 95 360 64 S405 83 435 52 S480 71 510 40 S555 52 600 17 L600 180 L0 180 Z" fill="url(#chartFill)"/><path d="M0 145 C35 132 40 148 68 120 S110 136 137 105 S180 120 210 87 S255 111 285 80 S330 95 360 64 S405 83 435 52 S480 71 510 40 S555 52 600 17" fill="none" stroke="#43c8ef" stroke-width="3" vector-effect="non-scaling-stroke"/></svg></div>
+          <div class="preview-foot"><span data-ar="تصميم توضيحي للواجهة" data-en="Illustrative UI concept">تصميم توضيحي للواجهة</span><span>Prices · News · Analysis</span></div>
+        </div>
+      </div>
+    </div></section>
+
+    <section class="section"><div class="container"><div class="section-heading"><span class="section-kicker" data-ar="المميزات الرئيسية" data-en="CORE FEATURES">المميزات الرئيسية</span><h2 data-ar="ما الذي يقدمه عقل كريبتو؟" data-en="What does AQL Crypto offer?">ما الذي يقدمه عقل كريبتو؟</h2><p data-ar="صُممت المنصة لتجميع المعلومات المهمة في تجربة واحدة، مع الاعتماد على مصادر بيانات ومحتوى آلي حيثما أمكن." data-en="The platform is designed to bring important information into one experience, using data sources and automated content processing where appropriate.">صُممت المنصة لتجميع المعلومات المهمة في تجربة واحدة، مع الاعتماد على مصادر بيانات ومحتوى آلي حيثما أمكن.</p></div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon">↗</div><h3 data-ar="أسعار السوق" data-en="Market prices">أسعار السوق</h3><p data-ar="عرض أسعار العملات الرقمية وبيانات السوق العامة بالاعتماد على واجهات بيانات خارجية." data-en="Displays cryptocurrency prices and general market data using external data APIs.">عرض أسعار العملات الرقمية وبيانات السوق العامة بالاعتماد على واجهات بيانات خارجية.</p></article>
+        <article class="feature-card"><div class="feature-icon">▤</div><h3 data-ar="الأخبار" data-en="News">الأخبار</h3><p data-ar="جمع الأخبار من خلاصات RSS ومصادر متخصصة، مع معالجة التكرار وتنظيم المحتوى." data-en="Collects news from RSS feeds and specialist sources, with duplicate detection and content organization.">جمع الأخبار من خلاصات RSS ومصادر متخصصة، مع معالجة التكرار وتنظيم المحتوى.</p></article>
+        <article class="feature-card"><div class="feature-icon">⌁</div><h3 data-ar="التحليلات" data-en="Analysis">التحليلات</h3><p data-ar="محتوى تحليلي وتقارير آلية لتقديم سياق إضافي حول المستجدات وحركة السوق." data-en="Automated analysis and reports provide additional context around market developments.">محتوى تحليلي وتقارير آلية لتقديم سياق إضافي حول المستجدات وحركة السوق.</p></article>
+        <article class="feature-card"><div class="feature-icon">◉</div><h3 data-ar="المؤشرات" data-en="Indicators">المؤشرات</h3><p data-ar="إتاحة مؤشرات عامة مثل مؤشر الخوف والطمع للمساعدة في فهم معنويات السوق." data-en="Includes general indicators such as the Fear & Greed Index to help contextualize market sentiment.">إتاحة مؤشرات عامة مثل مؤشر الخوف والطمع للمساعدة في فهم معنويات السوق.</p></article>
+        <article class="feature-card"><div class="feature-icon">▦</div><h3 data-ar="التقويم الاقتصادي" data-en="Economic calendar">التقويم الاقتصادي</h3><p data-ar="قسم مخصص لمتابعة الأحداث الاقتصادية المؤثرة في الأسواق، ضمن نطاق المشروع." data-en="A dedicated section for tracking economic events that may affect markets, within the project scope.">قسم مخصص لمتابعة الأحداث الاقتصادية المؤثرة في الأسواق، ضمن نطاق المشروع.</p></article>
+        <article class="feature-card"><div class="feature-icon">⌗</div><h3 data-ar="أدوات مساعدة" data-en="Utility tools">أدوات مساعدة</h3><p data-ar="مساحة لأدوات ومعلومات مساندة تساعد المستخدم على استكشاف بيانات السوق." data-en="A space for supporting tools and information that help users explore market data.">مساحة لأدوات ومعلومات مساندة تساعد المستخدم على استكشاف بيانات السوق.</p></article>
+      </div>
+    </div></section>
+
+    <section class="section" style="background:var(--bg-soft)"><div class="container"><div class="section-heading"><span class="section-kicker" data-ar="التنفيذ التقني" data-en="TECHNICAL IMPLEMENTATION">التنفيذ التقني</span><h2 data-ar="التقنيات وبنية العمل" data-en="Technology and implementation">التقنيات وبنية العمل</h2><p data-ar="يجمع المشروع بين إطار عمل خلفي، وواجهة تفاعلية، وقاعدة بيانات، وتكامل مع خدمات بيانات ومحتوى خارجية." data-en="The project combines a backend framework, an interactive frontend, a database, and integrations with external data and content services.">يجمع المشروع بين إطار عمل خلفي، وواجهة تفاعلية، وقاعدة بيانات، وتكامل مع خدمات بيانات ومحتوى خارجية.</p></div>
+      <div class="tech-grid"><div class="tech-card"><i class="devicon-laravel-plain colored" aria-hidden="true"></i><strong>Laravel</strong><small data-ar="إطار عمل التطبيق" data-en="Application framework">إطار عمل التطبيق</small></div><div class="tech-card"><i class="devicon-php-plain colored" aria-hidden="true"></i><strong>PHP</strong><small data-ar="منطق الخادم" data-en="Server-side logic">منطق الخادم</small></div><div class="tech-card"><i class="devicon-vuejs-plain colored" aria-hidden="true"></i><strong>Vue.js</strong><small data-ar="الواجهة التفاعلية" data-en="Interactive frontend">الواجهة التفاعلية</small></div><div class="tech-card"><i class="devicon-inertiajs-plain" aria-hidden="true"></i><strong>Inertia.js</strong><small data-ar="ربط الواجهة بالخلفية" data-en="Frontend/backend bridge">ربط الواجهة بالخلفية</small></div></div>
+      <div class="two-col" style="margin-top:20px"><article class="info-card"><h3 data-ar="تكامل البيانات والمحتوى" data-en="Data and content integrations">تكامل البيانات والمحتوى</h3><ul><li data-ar="CoinGecko لبيانات أسعار السوق." data-en="CoinGecko for market price data.">CoinGecko لبيانات أسعار السوق.</li><li data-ar="خلاصات RSS لجمع الأخبار من مصادر مختارة." data-en="RSS feeds to collect news from selected sources.">خلاصات RSS لجمع الأخبار من مصادر مختارة.</li><li data-ar="معالجة الأخبار بالذكاء الاصطناعي للمساعدة في إعادة الصياغة والتصنيف واستخلاص السياق." data-en="AI-assisted news rewriting, categorization, and context extraction.">معالجة الأخبار بالذكاء الاصطناعي للمساعدة في إعادة الصياغة والتصنيف واستخلاص السياق.</li></ul></article><article class="info-card"><h3 data-ar="دوري في المشروع" data-en="My role">دوري في المشروع</h3><p data-ar="تطوير وظائف التطبيق وربط مصادر البيانات، وتنظيم تدفق معالجة الأخبار، وإعداد الأوامر المجدولة ومراجعة الأخطاء وتحسين التشغيل المحلي." data-en="Developed application functionality and data integrations, organized the news-processing pipeline, configured scheduled commands, and worked on troubleshooting and local operation.">تطوير وظائف التطبيق وربط مصادر البيانات، وتنظيم تدفق معالجة الأخبار، وإعداد الأوامر المجدولة ومراجعة الأخطاء وتحسين التشغيل المحلي.</p><p style="margin-top:12px" data-ar="التقنيات المذكورة تمثل بنية المشروع، وليست ادعاءً بأن كل ميزة تعمل حاليًا على خادم عام." data-en="The listed technologies describe the project implementation; they do not imply that every feature is currently running on a public server.">التقنيات المذكورة تمثل بنية المشروع، وليست ادعاءً بأن كل ميزة تعمل حاليًا على خادم عام.</p></article></div>
+    </div></section>
+
+    <section class="section"><div class="container"><div class="section-heading"><span class="section-kicker" data-ar="معرض الواجهات" data-en="SCREENSHOT GALLERY">معرض الواجهات</span><h2 data-ar="لقطات من المشروع" data-en="Project screenshots">لقطات من المشروع</h2><p data-ar="أضف لقطات الشاشة الفعلية إلى مجلد الصور المتفق عليه لتظهر هنا بدل المعاينات التوضيحية." data-en="Add actual screenshots to the agreed image folder to display them here instead of the illustrative placeholders.">أضف لقطات الشاشة الفعلية إلى مجلد الصور المتفق عليه لتظهر هنا بدل المعاينات التوضيحية.</p></div>
+      <div class="gallery-grid">
+        <article class="gallery-item"><div class="gallery-image"><img src="images/cryptohub/cover.png" alt="AQL Crypto dashboard screenshot" onerror="this.style.display='none'"><div class="gallery-fallback"><b>AQL CRYPTO</b></div></div><div class="gallery-caption"><strong data-ar="لوحة التحكم والسوق" data-en="Dashboard and market">لوحة التحكم والسوق</strong><p data-ar="نظرة عامة على بيانات السوق ومعلوماته الرئيسية." data-en="An overview of market data and key information.">نظرة عامة على بيانات السوق ومعلوماته الرئيسية.</p></div></article>
+        <article class="gallery-item"><div class="gallery-image"><img src="images/cryptohub/prices.png" alt="Cryptocurrency prices page screenshot" onerror="this.style.display='none'"><div class="gallery-fallback"><b>MARKET PRICES</b></div></div><div class="gallery-caption"><strong data-ar="أسعار العملات" data-en="Cryptocurrency prices">أسعار العملات</strong><p data-ar="قائمة العملات الرقمية ومعلومات الأسعار." data-en="Cryptocurrency listings and price information.">قائمة العملات الرقمية ومعلومات الأسعار.</p></div></article>
+        <article class="gallery-item"><div class="gallery-image"><img src="images/cryptohub/news.png" alt="Crypto news page screenshot" onerror="this.style.display='none'"><div class="gallery-fallback"><b>CRYPTO NEWS</b></div></div><div class="gallery-caption"><strong data-ar="الأخبار" data-en="News">الأخبار</strong><p data-ar="الأخبار بعد جمعها وتنظيمها ومعالجتها." data-en="News after collection, organization, and processing.">الأخبار بعد جمعها وتنظيمها ومعالجتها.</p></div></article>
+        <article class="gallery-item"><div class="gallery-image"><img src="images/cryptohub/analysis.png" alt="Crypto analysis page screenshot" onerror="this.style.display='none'"><div class="gallery-fallback"><b>MARKET ANALYSIS</b></div></div><div class="gallery-caption"><strong data-ar="التحليلات والمؤشرات" data-en="Analysis and indicators">التحليلات والمؤشرات</strong><p data-ar="محتوى التحليل ومؤشرات معنويات السوق." data-en="Analysis content and market sentiment indicators.">محتوى التحليل ومؤشرات معنويات السوق.</p></div></article>
+      </div>
+      <div class="disclaimer"><strong data-ar="تنويه" data-en="Disclaimer">تنويه</strong> — <span data-ar="عقل كريبتو مشروع معلوماتي وليس منصة تداول أو استثمار. المعلومات لا تمثل نصيحة مالية، وقد تكون الأسعار والمؤشرات متأخرة أو قابلة للتغيير." data-en="AQL Crypto is an informational project, not a trading or investment platform. Content is not financial advice, and prices or indicators may be delayed or change.">عقل كريبتو مشروع معلوماتي وليس منصة تداول أو استثمار. المعلومات لا تمثل نصيحة مالية، وقد تكون الأسعار والمؤشرات متأخرة أو قابلة للتغيير.</span></div>
+    </div></section>
+    <section class="section" style="padding-top:0"><div class="container back-row"><p data-ar="هل تريد استعراض بقية أعمالي؟" data-en="Want to explore my other work?">هل تريد استعراض بقية أعمالي؟</p><a class="button button-primary" href="../index.html#projects"><span data-ar="العودة إلى معرض الأعمال" data-en="Return to portfolio">العودة إلى معرض الأعمال</span><span aria-hidden="true">↙</span></a></div></section>
+  </main>
+  <footer class="detail-footer"><div class="container"><span>© <span id="current-year"></span> Aseel Ali</span><a href="../index.html" data-ar="الصفحة الرئيسية" data-en="Portfolio home">الصفحة الرئيسية</a></div></footer>
+  <script src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.js"></script>
+  <script>
+    (()=>{
+      const root=document.documentElement;
+      const langButton=document.getElementById('lang-toggle');
+      const themeButton=document.getElementById('theme-toggle');
+      const themeIcon=document.getElementById('theme-icon');
+      const menuButton=document.getElementById('menu-toggle');
+      const nav=document.getElementById('nav-links');
+      const storedLang=localStorage.getItem('aseel-portfolio-language')||'ar';
+      const storedTheme=localStorage.getItem('aseel-portfolio-theme')||'dark';
+      function setLanguage(lang){root.lang=lang;root.dir=lang==='ar'?'rtl':'ltr';document.querySelectorAll('[data-ar][data-en]').forEach(el=>{el.textContent=el.dataset[lang]});langButton.textContent=lang==='ar'?'EN':'عربي';document.title=lang==='ar'?'عقل كريبتو AQL Crypto | تفاصيل المشروع - أصيل علي':'AQL Crypto | Project Details - Aseel Ali';localStorage.setItem('aseel-portfolio-language',lang)}
+      function setTheme(theme){root.dataset.theme=theme;themeIcon.textContent=theme==='dark'?'☼':'☾';themeButton.setAttribute('aria-label',theme==='dark'?'تبديل إلى الوضع الفاتح':'Switch to dark mode');localStorage.setItem('aseel-portfolio-theme',theme)}
+      langButton.addEventListener('click',()=>setLanguage(root.lang==='ar'?'en':'ar'));
+      themeButton.addEventListener('click',()=>setTheme(root.dataset.theme==='dark'?'light':'dark'));
+      menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menuButton.setAttribute('aria-expanded',String(open))});
+      nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menuButton.setAttribute('aria-expanded','false')}));
+      document.getElementById('current-year').textContent=new Date().getFullYear();setTheme(storedTheme);setLanguage(storedLang);
+    })();
+  </script>
+</body>
+</html>

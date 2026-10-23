@@ -1,0 +1,825 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>متجر عالم العقيق اليماني | دراسة حالة مشروع</title>
+
+    <meta name="description"
+          content="دراسة حالة تقنية لمتجر عالم العقيق اليماني، تشمل عرض المنتجات وسلة المشتريات والمفضلة والتكامل مع واتساب وتحسين محركات البحث.">
+
+    <meta name="theme-color" content="#321019">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <style>
+        :root {
+            --aq-primary: #50a785;
+            --aq-dark: #0d3027;
+            --aq-gold: #c9a45d;
+            --aq-light-gold: #d9bc83;
+            --aq-bg: #faf8f5;
+            --aq-text: #302a2a;
+            --aq-muted: #746b6b;
+            --aq-border: #e8dfd9;
+        }
+
+        body {
+            margin: 0;
+            background: var(--aq-bg);
+            color: var(--aq-text);
+            font-family: Tajawal, Arial, sans-serif;
+            line-height: 1.9;
+        }
+
+        .aq-container {
+            width: min(1120px, 92%);
+            margin-inline: auto;
+        }
+
+        .aq-nav {
+            background: var(--aq-dark);
+            color: white;
+            padding: 16px 0;
+        }
+
+        .aq-nav-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .aq-brand {
+            color: white;
+            font-weight: 800;
+            text-decoration: none;
+        }
+
+        .aq-nav a,
+        .aq-nav button {
+            color: white;
+        }
+
+        .aq-nav-links {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .aq-nav-links a {
+            text-decoration: none;
+        }
+
+        .aq-lang {
+            background: transparent;
+            border: 1px solid var(--aq-gold);
+            padding: 7px 13px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        .aq-hero {
+            background:
+                radial-gradient(circle at 85% 15%, #70404a 0, transparent 38%),
+                linear-gradient(135deg, var(--aq-dark), var(--aq-primary));
+            color: white;
+            padding: 76px 0;
+        }
+
+        .aq-kicker {
+            color: var(--aq-light-gold);
+            font-weight: 700;
+            letter-spacing: .5px;
+        }
+
+        .aq-hero h1 {
+            font-size: clamp(2rem, 5vw, 3.6rem);
+            line-height: 1.35;
+            margin: 12px 0;
+        }
+
+        .aq-hero p {
+            max-width: 760px;
+            color: #f2e8e8;
+            font-size: 1.08rem;
+        }
+
+        .aq-actions {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .aq-btn {
+            display: inline-block;
+            padding: 11px 20px;
+            border-radius: 9px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 1px solid var(--aq-gold);
+        }
+
+        .aq-btn-primary {
+            color: var(--aq-dark);
+            background: var(--aq-gold);
+        }
+
+        .aq-btn-secondary {
+            color: white;
+            background: transparent;
+        }
+
+        .aq-section {
+            padding: 54px 0;
+        }
+
+        .aq-section h2 {
+            color: var(--aq-primary);
+            font-size: clamp(1.5rem, 3vw, 2.1rem);
+            margin: 0 0 12px;
+        }
+
+        .aq-lead {
+            color: var(--aq-muted);
+            max-width: 850px;
+            margin-bottom: 28px;
+        }
+
+        .aq-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .aq-card {
+            background: white;
+            border: 1px solid var(--aq-border);
+            border-radius: 15px;
+            padding: 22px;
+            box-shadow: 0 5px 20px #32101908;
+        }
+
+        .aq-card h3 {
+            color: var(--aq-primary);
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .aq-card p {
+            margin-bottom: 0;
+            color: var(--aq-muted);
+        }
+
+        .aq-feature-icon {
+            font-size: 1.7rem;
+            margin-bottom: 8px;
+        }
+
+        .aq-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 9px;
+            margin-top: 18px;
+        }
+
+        .aq-tag {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: #f1e8e4;
+            color: var(--aq-primary);
+            font-size: .92rem;
+            font-weight: 700;
+        }
+
+        .aq-highlight {
+            border-right: 4px solid var(--aq-gold);
+            padding: 16px 20px;
+            background: #f4eee7;
+            border-radius: 8px;
+            margin: 22px 0;
+        }
+
+        .aq-list {
+            padding-inline-start: 22px;
+        }
+
+        .aq-list li {
+            margin-bottom: 8px;
+        }
+
+        .aq-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .aq-shot {
+            background: white;
+            border: 1px solid var(--aq-border);
+            border-radius: 14px;
+            overflow: hidden;
+        }
+
+       .aq-shot img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background: #eee6e0;
+}
+
+        .aq-shot figcaption {
+            padding: 14px 16px;
+        }
+
+        .aq-shot figcaption strong {
+            display: block;
+            color: var(--aq-primary);
+        }
+
+        .aq-shot figcaption span {
+            color: var(--aq-muted);
+            font-size: .92rem;
+        }
+
+        .aq-code {
+            direction: ltr;
+            text-align: left;
+            overflow-x: auto;
+            background: #25171a;
+            color: #f8eede;
+            padding: 18px;
+            border-radius: 12px;
+            font-size: .9rem;
+        }
+
+        .aq-steps {
+            counter-reset: aq-step;
+            list-style: none;
+            padding: 0;
+        }
+
+        .aq-steps li {
+            counter-increment: aq-step;
+            position: relative;
+            padding: 0 52px 24px 0;
+        }
+
+        .aq-steps li::before {
+            content: counter(aq-step);
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 36px;
+            height: 36px;
+            display: grid;
+            place-items: center;
+            border-radius: 50%;
+            color: var(--aq-dark);
+            background: var(--aq-gold);
+            font-weight: 800;
+        }
+
+        .aq-footer {
+            padding: 28px 0;
+            background: var(--aq-dark);
+            color: #f2e8e8;
+            text-align: center;
+        }
+
+        .aq-footer a {
+            color: var(--aq-light-gold);
+        }
+
+        [hidden] {
+            display: none !important;
+        }
+
+        @media (max-width: 760px) {
+            .aq-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .aq-hero {
+                padding: 52px 0;
+            }
+        }
+
+        @media (max-width: 520px) {
+            .aq-grid,
+            .aq-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .aq-nav-inner {
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<header class="aq-nav">
+    <div class="aq-container aq-nav-inner">
+        <a class="aq-brand" href="../index.html"
+           data-ar="أصيل | معرض الأعمال"
+           data-en="Aseel | Portfolio">أصيل | معرض الأعمال</a>
+
+        <nav class="aq-nav-links" aria-label="التنقل الرئيسي">
+            <a href="../index.html"
+               data-ar="الرئيسية"
+               data-en="Home">الرئيسية</a>
+
+            <a href="#overview"
+               data-ar="نظرة عامة"
+               data-en="Overview">نظرة عامة</a>
+
+            <a href="#features"
+               data-ar="الوظائف"
+               data-en="Features">الوظائف</a>
+
+            <a href="#technology"
+               data-ar="التقنيات"
+               data-en="Technology">التقنيات</a>
+
+            <button class="aq-lang" id="aq-language" type="button">
+                English
+            </button>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="aq-hero">
+        <div class="aq-container">
+            <div class="aq-kicker"
+                 data-ar="دراسة حالة مشروع ويب"
+                 data-en="Web Development Case Study">
+                دراسة حالة مشروع ويب
+            </div>
+
+            <h1 data-ar="متجر عالم العقيق اليماني"
+                data-en="Yemen Aqeeq Online Store">
+                متجر عالم العقيق اليماني
+            </h1>
+
+            <p data-ar="متجر إلكتروني متخصص في عرض منتجات العقيق اليماني، يضم كتالوجًا للمنتجات وصفحات للتفاصيل وسلة مشتريات وقائمة رغبات، مع إمكانية الانتقال لإتمام الطلب عبر واتساب."
+               data-en="An online store focused on Yemeni agate products, featuring a product catalog, product detail pages, a shopping cart, a wishlist, and a WhatsApp-based order handoff.">
+                متجر إلكتروني متخصص في عرض منتجات العقيق اليماني، يضم كتالوجًا للمنتجات وصفحات للتفاصيل وسلة مشتريات وقائمة رغبات، مع إمكانية الانتقال لإتمام الطلب عبر واتساب.
+            </p>
+
+            <div class="aq-actions">
+                <a class="aq-btn aq-btn-primary"
+                   href="https://yemenaqeeq.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-ar="زيارة المتجر"
+                   data-en="Visit Store">زيارة المتجر</a>
+
+                <a class="aq-btn aq-btn-secondary"
+                   href="https://github.com/aseelali775"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-ar="حساب GitHub"
+                   data-en="GitHub Profile">حساب GitHub</a>
+            </div>
+
+            <div class="aq-tags">
+                <span class="aq-tag">Laravel</span>
+                <span class="aq-tag">PHP</span>
+                <span class="aq-tag">Filament</span>
+                <span class="aq-tag">Blade</span>
+                <span class="aq-tag">SQL</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="aq-section" id="overview">
+        <div class="aq-container">
+            <h2 data-ar="نظرة عامة على المشروع"
+                data-en="Project Overview">نظرة عامة على المشروع</h2>
+
+            <p class="aq-lead"
+               data-ar="يركز المشروع على تقديم المنتجات بطريقة منظمة وتسهيل وصول الزائر إلى القطعة التي يبحث عنها، مع توفير وظائف أساسية للتصفح وإدارة الاختيارات والانتقال إلى التواصل وإتمام الطلب."
+               data-en="The project focuses on presenting products in an organized way, helping visitors find items, manage selections, and proceed to contact and order completion.">
+                يركز المشروع على تقديم المنتجات بطريقة منظمة وتسهيل وصول الزائر إلى القطعة التي يبحث عنها، مع توفير وظائف أساسية للتصفح وإدارة الاختيارات والانتقال إلى التواصل وإتمام الطلب.
+            </p>
+
+            <div class="aq-grid">
+                <article class="aq-card">
+                    <div class="aq-feature-icon">🎯</div>
+                    <h3 data-ar="هدف المشروع"
+                        data-en="Project Goal">هدف المشروع</h3>
+                    <p data-ar="إنشاء واجهة إلكترونية تعرض منتجات العقيق اليماني وتتيح للزائر استكشاف المنتجات وتفاصيلها."
+                       data-en="Build an online storefront for Yemeni agate products and let visitors explore items and their details.">
+                        إنشاء واجهة إلكترونية تعرض منتجات العقيق اليماني وتتيح للزائر استكشاف المنتجات وتفاصيلها.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <div class="aq-feature-icon">🛍️</div>
+                    <h3 data-ar="تجربة التصفح"
+                        data-en="Browsing Experience">تجربة التصفح</h3>
+                    <p data-ar="تنظيم الوصول إلى الكتالوج وصفحات المنتجات وسلة المشتريات وقائمة الرغبات."
+                       data-en="Organize access to the catalog, product pages, shopping cart, and wishlist.">
+                        تنظيم الوصول إلى الكتالوج وصفحات المنتجات وسلة المشتريات وقائمة الرغبات.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <div class="aq-feature-icon">⚙️</div>
+                    <h3 data-ar="الجانب الإداري"
+                        data-en="Administration">الجانب الإداري</h3>
+                    <p data-ar="يتضمن المشروع مسارات محمية لبعض عمليات الإدارة، مثل تحديث الإعدادات وتغيير كلمة المرور."
+                       data-en="The project includes protected routes for administrative operations such as updating settings and changing a password.">
+                        يتضمن المشروع مسارات محمية لبعض عمليات الإدارة، مثل تحديث الإعدادات وتغيير كلمة المرور.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="aq-section" id="features">
+        <div class="aq-container">
+            <h2 data-ar="الوظائف الرئيسية"
+                data-en="Core Features">الوظائف الرئيسية</h2>
+
+            <p class="aq-lead"
+               data-ar="تستند الوظائف التالية إلى المسارات الموجودة في ملف routes/web.php."
+               data-en="The following features are based on the routes defined in routes/web.php.">
+                تستند الوظائف التالية إلى المسارات الموجودة في ملف routes/web.php.
+            </p>
+
+            <div class="aq-grid">
+                <article class="aq-card">
+                    <h3 data-ar="الصفحة الرئيسية والكتالوج"
+                        data-en="Homepage and Catalog">الصفحة الرئيسية والكتالوج</h3>
+                    <p data-ar="مسارات مخصصة للصفحة الرئيسية وكتالوج المنتجات."
+                       data-en="Dedicated routes for the homepage and product catalog.">
+                        مسارات مخصصة للصفحة الرئيسية وكتالوج المنتجات.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="تفاصيل المنتجات"
+                        data-en="Product Details">تفاصيل المنتجات</h3>
+                    <p data-ar="عرض المنتج باستخدام معرّفه ورابط مختصر مناسب، مع مسار لمعالجة بعض الروابط القديمة."
+                       data-en="Product pages use an identifier and a slug, with a route for handling certain legacy URLs.">
+                        عرض المنتج باستخدام معرّفه ورابط مختصر مناسب، مع مسار لمعالجة بعض الروابط القديمة.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="سلة المشتريات"
+                        data-en="Shopping Cart">سلة المشتريات</h3>
+                    <p data-ar="مسارات لإضافة المنتجات إلى السلة وعرضها وإزالة العناصر أو إفراغ السلة."
+                       data-en="Routes support adding items, viewing the cart, removing items, and clearing the cart.">
+                        مسارات لإضافة المنتجات إلى السلة وعرضها وإزالة العناصر أو إفراغ السلة.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="إتمام الطلب عبر واتساب"
+                        data-en="WhatsApp Order Handoff">إتمام الطلب عبر واتساب</h3>
+                    <p data-ar="يوجد مسار مخصص للانتقال من السلة إلى خطوة إتمام الطلب عبر واتساب."
+                       data-en="A dedicated route handles the transition from the cart to WhatsApp order completion.">
+                        يوجد مسار مخصص للانتقال من السلة إلى خطوة إتمام الطلب عبر واتساب.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="الكوبونات"
+                        data-en="Coupons">الكوبونات</h3>
+                    <p data-ar="توجد مسارات لتطبيق كوبون وإزالته من السلة."
+                       data-en="Routes are defined for applying and removing a cart coupon.">
+                        توجد مسارات لتطبيق كوبون وإزالته من السلة.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="قائمة الرغبات"
+                        data-en="Wishlist">قائمة الرغبات</h3>
+                    <p data-ar="مسارات لعرض قائمة الرغبات وإضافة المنتجات إليها وإزالتها."
+                       data-en="Routes support viewing the wishlist and adding or removing products.">
+                        مسارات لعرض قائمة الرغبات وإضافة المنتجات إليها وإزالتها.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="التواصل والصفحات المعلوماتية"
+                        data-en="Contact and Information Pages">التواصل والصفحات المعلوماتية</h3>
+                    <p data-ar="صفحة اتصال ومسار لاستقبال الرسائل، إضافة إلى صفحات معلوماتية تعتمد على الرابط المختصر."
+                       data-en="A contact page and message-submission route, along with information pages selected by slug.">
+                        صفحة اتصال ومسار لاستقبال الرسائل، إضافة إلى صفحات معلوماتية تعتمد على الرابط المختصر.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="خريطة الموقع"
+                        data-en="Sitemap">خريطة الموقع</h3>
+                    <p data-ar="مسار مخصص لملف sitemap.xml لدعم اكتشاف الصفحات بواسطة محركات البحث."
+                       data-en="A dedicated sitemap.xml route to help search engines discover site pages.">
+                        مسار مخصص لملف sitemap.xml لدعم اكتشاف الصفحات بواسطة محركات البحث.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="إعدادات الإدارة"
+                        data-en="Administrative Settings">إعدادات الإدارة</h3>
+                    <p data-ar="مسارات محمية بتسجيل الدخول لتحديث الإعدادات وتغيير كلمة المرور."
+                       data-en="Authenticated routes for updating settings and changing the password.">
+                        مسارات محمية بتسجيل الدخول لتحديث الإعدادات وتغيير كلمة المرور.
+                    </p>
+                </article>
+            </div>
+
+            <div class="aq-highlight"
+                 data-ar="ملاحظة: وجود المسارات يوضح الوظائف التي صُممت لها نقاط الوصول، لكنه لا يثبت وحده أن جميع الوظائف تعمل حاليًا أو أن كل سيناريو قد اجتاز الاختبارات."
+                 data-en="Note: Route definitions show the intended application endpoints, but do not independently prove that every feature currently works or that every scenario has passed testing.">
+                ملاحظة: وجود المسارات يوضح الوظائف التي صُممت لها نقاط الوصول، لكنه لا يثبت وحده أن جميع الوظائف تعمل حاليًا أو أن كل سيناريو قد اجتاز الاختبارات.
+            </div>
+        </div>
+    </section>
+
+    <section class="aq-section" id="technology">
+        <div class="aq-container">
+            <h2 data-ar="التقنيات والبنية"
+                data-en="Technology and Architecture">التقنيات والبنية</h2>
+
+            <p class="aq-lead"
+               data-ar="يعتمد المشروع على Laravel، وتوضح أسماء المسارات والمتحكمات تنظيمًا يفصل بين استقبال الطلبات ومعالجة منطق التطبيق وعرض الصفحات."
+               data-en="The project uses Laravel. Its routes and controller structure separates request handling, application logic, and page rendering.">
+                يعتمد المشروع على Laravel، وتوضح أسماء المسارات والمتحكمات تنظيمًا يفصل بين استقبال الطلبات ومعالجة منطق التطبيق وعرض الصفحات.
+            </p>
+
+            <div class="aq-grid">
+                <article class="aq-card">
+                    <h3>Laravel وPHP</h3>
+                    <p data-ar="إطار عمل وخلفية برمجية لتعريف المسارات وربطها بالمتحكمات وتنظيم وظائف الموقع."
+                       data-en="Backend framework and language for routing requests and organizing application features.">
+                        إطار عمل وخلفية برمجية لتعريف المسارات وربطها بالمتحكمات وتنظيم وظائف الموقع.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3>MVC</h3>
+                    <p data-ar="نمط معماري يساعد على الفصل بين المسارات والمتحكمات والنماذج والواجهات."
+                       data-en="An architectural pattern that separates routing, controllers, models, and views.">
+                        نمط معماري يساعد على الفصل بين المسارات والمتحكمات والنماذج والواجهات.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3>Filament وBlade</h3>
+                    <p data-ar="من التقنيات المستخدمة في المشروع وفق المعلومات المتوفرة عنه."
+                       data-en="Technologies used in the project according to the available project information.">
+                        من التقنيات المستخدمة في المشروع وفق المعلومات المتوفرة عنه.
+                    </p>
+                </article>
+            </div>
+
+            <h3 data-ar="مثال على تنظيم المسارات"
+                data-en="Example of Route Organization">مثال على تنظيم المسارات</h3>
+
+            <p data-ar="يوضح المثال التالي كيف يربط Laravel عنوانًا بطلب معين بمتحكم مسؤول عن معالجته."
+               data-en="The following example illustrates how Laravel maps a URL to a controller responsible for handling the request.">
+                يوضح المثال التالي كيف يربط Laravel عنوانًا بطلب معين بمتحكم مسؤول عن معالجته.
+            </p>
+
+            <pre class="aq-code"><code>Route::get('/catalog', [
+    ProductController::class,
+    'index'
+])->name('catalog.index');
+
+Route::get('/product/{id}/{slug}', [
+    ProductController::class,
+    'show'
+])->name('products.show');</code></pre>
+
+            <p data-ar="في المثال الأول، يوجّه المسار طلب عرض الكتالوج إلى الدالة index. وفي الثاني، يوجّه طلب تفاصيل منتج إلى الدالة show مع تمرير معرّف المنتج والـ slug."
+               data-en="The first route directs catalog requests to index. The second directs product-detail requests to show, passing the product identifier and slug.">
+                في المثال الأول، يوجّه المسار طلب عرض الكتالوج إلى الدالة index. وفي الثاني، يوجّه طلب تفاصيل منتج إلى الدالة show مع تمرير معرّف المنتج والـ slug.
+            </p>
+        </div>
+    </section>
+
+    <section class="aq-section" id="seo">
+        <div class="aq-container">
+            <h2 data-ar="تحسين محركات البحث"
+                data-en="Search Engine Optimization">تحسين محركات البحث</h2>
+
+            <div class="aq-grid">
+                <article class="aq-card">
+                    <h3 data-ar="روابط المنتجات"
+                        data-en="Product URLs">روابط المنتجات</h3>
+                    <p data-ar="استخدام معرّف المنتج مع slug في رابط التفاصيل، مع مسار لمعالجة الروابط القديمة."
+                       data-en="Product detail URLs include an identifier and slug, with a route for legacy URL handling.">
+                        استخدام معرّف المنتج مع slug في رابط التفاصيل، مع مسار لمعالجة الروابط القديمة.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3> sitemap.xml </h3>
+                    <p data-ar="توفير مسار مخصص لخريطة الموقع؛ أما محتواها الفعلي فيعتمد على تنفيذ SitemapController."
+                       data-en="A dedicated sitemap route is defined; its actual contents depend on the SitemapController implementation.">
+                        توفير مسار مخصص لخريطة الموقع؛ أما محتواها الفعلي فيعتمد على تنفيذ SitemapController.
+                    </p>
+                </article>
+
+                <article class="aq-card">
+                    <h3 data-ar="الصفحات المعلوماتية"
+                        data-en="Information Pages">الصفحات المعلوماتية</h3>
+                    <p data-ar="مسار ديناميكي لعرض صفحات معلوماتية باستخدام slug، مثل الصفحات التعريفية والسياسات."
+                       data-en="A dynamic route serves information pages using a slug, such as company information and policies.">
+                        مسار ديناميكي لعرض صفحات معلوماتية باستخدام slug، مثل الصفحات التعريفية والسياسات.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="aq-section" id="gallery">
+        <div class="aq-container">
+            <h2 data-ar="معرض صور المشروع"
+                data-en="Project Gallery">معرض صور المشروع</h2>
+
+            <p class="aq-lead"
+               data-ar="استبدل الصور التالية بلقطات شاشة حقيقية من المتجر ولوحة الإدارة. احفظ الصور داخل مجلد images بجانب هذا الملف."
+               data-en="Replace the sample image paths below with real screenshots of the store and admin panel. Save the images in an images folder beside this file.">
+                استبدل الصور التالية بلقطات شاشة حقيقية من المتجر ولوحة الإدارة. احفظ الصور داخل مجلد images بجانب هذا الملف.
+            </p>
+
+            <div class="aq-gallery">
+                <figure class="aq-shot">
+                    <img src="images/yemen-aqeeq/store-home.png"
+                         alt="الصفحة الرئيسية لمتجر عالم العقيق اليماني"
+                         loading="lazy">
+                    <figcaption>
+                        <strong data-ar="الصفحة الرئيسية"
+                                data-en="Homepage">الصفحة الرئيسية</strong>
+                        <span data-ar="واجهة المتجر وطريقة تقديم العلامة التجارية."
+                              data-en="Storefront and brand presentation.">
+                            واجهة المتجر وطريقة تقديم العلامة التجارية.
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure class="aq-shot">
+                    <img src="images/yemen-aqeeq/product-catalog.png"
+                         alt="كتالوج منتجات العقيق"
+                         loading="lazy">
+                    <figcaption>
+                        <strong data-ar="كتالوج المنتجات"
+                                data-en="Product Catalog">كتالوج المنتجات</strong>
+                        <span data-ar="عرض المنتجات والتصنيفات."
+                              data-en="Product and category presentation.">
+                            عرض المنتجات والتصنيفات.
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure class="aq-shot">
+                    <img src="images/yemen-aqeeq/product-details.png"
+                         alt="صفحة تفاصيل منتج"
+                         loading="lazy">
+                    <figcaption>
+                        <strong data-ar="تفاصيل المنتج"
+                                data-en="Product Details">تفاصيل المنتج</strong>
+                        <span data-ar="صفحة عرض معلومات القطعة المختارة."
+                              data-en="Details page for a selected item.">
+                            صفحة عرض معلومات القطعة المختارة.
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure class="aq-shot">
+                    <img src="images/yemen-aqeeq/admin-panel.png"
+                         alt="لوحة إدارة المتجر"
+                         loading="lazy">
+                    <figcaption>
+                        <strong data-ar="لوحة الإدارة"
+                                data-en="Admin Panel">لوحة الإدارة</strong>
+                        <span data-ar="لقطة فعلية من لوحة الإدارة."
+                              data-en="A real screenshot of the admin panel.">
+                            لقطة فعلية من لوحة الإدارة.
+                        </span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <section class="aq-section" id="workflow">
+        <div class="aq-container">
+            <h2 data-ar="تدفق الاستخدام"
+                data-en="User Workflow">تدفق الاستخدام</h2>
+
+            <ol class="aq-steps">
+                <li>
+                    <strong data-ar="استكشاف المنتجات"
+                            data-en="Explore Products">استكشاف المنتجات</strong>
+                    <div data-ar="يدخل الزائر إلى الصفحة الرئيسية أو الكتالوج للبحث عن المنتجات."
+                         data-en="The visitor opens the homepage or catalog to browse products.">
+                        يدخل الزائر إلى الصفحة الرئيسية أو الكتالوج للبحث عن المنتجات.
+                    </div>
+                </li>
+
+                <li>
+                    <strong data-ar="عرض التفاصيل والاختيار"
+                            data-en="View Details and Select">عرض التفاصيل والاختيار</strong>
+                    <div data-ar="يفتح الزائر صفحة المنتج، ويمكنه استخدام وظائف السلة أو قائمة الرغبات المتاحة."
+                         data-en="The visitor opens a product page and can use the available cart or wishlist features.">
+                        يفتح الزائر صفحة المنتج، ويمكنه استخدام وظائف السلة أو قائمة الرغبات المتاحة.
+                    </div>
+                </li>
+
+                <li>
+                    <strong data-ar="الانتقال إلى الطلب"
+                            data-en="Proceed to Order">الانتقال إلى الطلب</strong>
+                    <div data-ar="يوفر المشروع مسارًا للانتقال إلى إتمام الطلب عبر واتساب."
+                         data-en="The project provides a route for handing the order over to WhatsApp.">
+                        يوفر المشروع مسارًا للانتقال إلى إتمام الطلب عبر واتساب.
+                    </div>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <section class="aq-section" id="conclusion">
+        <div class="aq-container">
+            <h2 data-ar="خلاصة المشروع"
+                data-en="Project Summary">خلاصة المشروع</h2>
+
+            <p data-ar="يعكس المشروع تطبيقًا عمليًا لتطوير متجر باستخدام Laravel، مع تنظيم المسارات وتوفير وظائف متعددة للكتالوج والمنتجات والسلة والمفضلة والصفحات المعلوماتية. كما يتيح المشروع عرض جوانب من العمل على الخلفية البرمجية وتنظيم وظائف التطبيق."
+               data-en="This project demonstrates practical store development with Laravel, including organized routes and features for the catalog, products, cart, wishlist, and information pages. It also provides an example of backend development and application organization.">
+                يعكس المشروع تطبيقًا عمليًا لتطوير متجر باستخدام Laravel، مع تنظيم المسارات وتوفير وظائف متعددة للكتالوج والمنتجات والسلة والمفضلة والصفحات المعلوماتية. كما يتيح المشروع عرض جوانب من العمل على الخلفية البرمجية وتنظيم وظائف التطبيق.
+            </p>
+
+            <div class="aq-actions">
+                <a class="aq-btn aq-btn-primary"
+                   href="https://yemenaqeeq.com/"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   data-ar="زيارة المتجر"
+                   data-en="Visit Store">زيارة المتجر</a>
+
+                <a class="aq-btn aq-btn-primary"
+                   href="../index.html"
+                   data-ar="العودة إلى معرض الأعمال"
+                   data-en="Back to Portfolio">العودة إلى معرض الأعمال</a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="aq-footer">
+    <div class="aq-container">
+        <p data-ar="مشروع ضمن معرض الأعمال التقني."
+           data-en="A project featured in the development portfolio.">
+            مشروع ضمن معرض الأعمال التقني.
+        </p>
+
+        <a href="https://github.com/aseelali775"
+           target="_blank"
+           rel="noopener noreferrer">GitHub</a>
+    </div>
+</footer>
+
+<script>
+    (() => {
+        const languageButton = document.getElementById('aq-language');
+        let currentLanguage = 'ar';
+
+        function setLanguage(language) {
+            currentLanguage = language;
+
+            document.documentElement.lang = language;
+            document.documentElement.dir = language === 'ar' ? 'rtl' : 'ltr';
+
+            document.querySelectorAll('[data-ar][data-en]').forEach((element) => {
+                const value = element.getAttribute(`data-${language}`);
+
+                if (value !== null) {
+                    element.textContent = value;
+                }
+            });
+
+            languageButton.textContent = language === 'ar' ? 'English' : 'العربية';
+        }
+
+        languageButton.addEventListener('click', () => {
+            setLanguage(currentLanguage === 'ar' ? 'en' : 'ar');
+        });
+
+        setLanguage('ar');
+    })();
+</script>
+</body>
+</html>
