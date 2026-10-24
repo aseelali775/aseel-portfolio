@@ -29,3 +29,18 @@
 .project-details-link:hover{gap:14px;color:var(--text)}
 .project-details-link .project-arrow{font-size:1.15rem}
 @media(max-width:760px){.project-details-link{font-size:.8rem;gap:7px}}
+
+/* Profile photo */
+.portrait-frame {
+    overflow: hidden;
+}
+
+.profile-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+    border-radius: inherit;
+}
+
